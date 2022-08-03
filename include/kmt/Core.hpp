@@ -1,3 +1,9 @@
+/**
+ * @file Core.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains all core types and non member functions.
+ */
 #ifndef KMTABLELIB_KMT_CORE_HPP
 #define KMTABLELIB_KMT_CORE_HPP
 

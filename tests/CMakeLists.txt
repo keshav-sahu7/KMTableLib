@@ -53,7 +53,7 @@ add_executable(test_table
 )
 
 #add test
-add_test(NAME table COMMAND ${CMAKE_BINARY_DIR}/bin/test_table)
+add_test(NAME table COMMAND ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/bin/test_table)
 
 set_target_properties( test_table
     PROPERTIES

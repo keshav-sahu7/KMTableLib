@@ -1,3 +1,10 @@
+/**
+ * @file FunctionStore.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains classes for adding functions for formula.
+ */
+
 #ifndef KMTABLELIB_KMT_FUNCTIONMANAGER_HPP
 #define KMTABLELIB_KMT_FUNCTIONMANAGER_HPP
 
@@ -10,6 +17,10 @@
 namespace km
 {
 
+    /**
+     * @brief Initializes or loads all the built in functions in the FunctionStore::store()
+     * so that it can be used with formulas.
+     */
     void initAllFnc();
 
     /**

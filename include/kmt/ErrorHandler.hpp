@@ -1,3 +1,10 @@
+/**
+ * @file ErrorHandler.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains error handling classes and functions.
+ */
+
 #ifndef KMTABLELIB_KMT_ERRORHANDLER_HPP
 #define KMTABLELIB_KMT_ERRORHANDLER_HPP
 

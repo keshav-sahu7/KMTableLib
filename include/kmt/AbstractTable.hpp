@@ -1,7 +1,7 @@
 /**
  * @file AbstractTable.hpp
  * @author Keshav Sahu
- * @date May 1st 2022
+ * @date Aug 2 2022
  * @brief This file contains base interface for all the table and view classes.
  */
 
@@ -34,8 +34,8 @@ namespace km
      */
     enum class SortingOrder
     {
-        ASCENDING, /// ascending order
-        DESCENDING /// descending order
+        ASCENDING, ///< ascending order
+        DESCENDING ///< descending order
     };
 
     using AbstractColumnPtr_ = AbstractColumn *;
@@ -368,15 +368,15 @@ namespace km
         KM_SIGNAL void aboutToDestruct();
 
     protected:
-        std::string m_name;           /// name of the table/view.
-        std::string m_decorated_name; /// decorated name.
-        SortingOrder m_sorder;        /// sorting order of table/view.
+        std::string m_name;           ///< name of the table/view.
+        std::string m_decorated_name; ///< decorated name.
+        SortingOrder m_sorder;        ///< sorting order of table/view.
 
     private:
-        bool m_no_sorting;                             /// sorting order of the table or view.
-        bool m_process_event;                          /// holds information if event processing is paused.
-        std::vector<AbstractView *> m_dependent_views; /// Views that depends on this table/view
-        IndexType m_key_column;                        /// index of sorting column.
+        bool m_no_sorting;                             ///< sorting order of the table or view.
+        bool m_process_event;                          ///< holds information if event processing is paused.
+        std::vector<AbstractView *> m_dependent_views; ///< Views that depends on this table/view
+        IndexType m_key_column;                        ///< index of sorting column.
 
         // friend functions and classes
         friend void ::km::parse::evaluateFormula(parse::ConstTokenContainerRef, AbstractTable *, IndexType, IndexType, IndexType);

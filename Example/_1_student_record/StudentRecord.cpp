@@ -10,7 +10,7 @@
 void printMarks(const km::Variant &data, std::ostream &out)
 {
     out << std::left << std::setw(16) << data.asInt32();
-};
+}
 
 void printName(const km::Variant &data, std::ostream &out)
 {
@@ -22,7 +22,7 @@ void headerPrinter(const std::vector<std::string> &headers, std::ostream &out, c
     for (const auto &header : headers)
         out << std::left << std::setw(16) << header;
     out << '\n' << std::string(headers.size() * 16, '-');
-};
+}
 
 StudentRecord::StudentRecord()
 {
@@ -75,7 +75,9 @@ void StudentRecord::showAllStudent()
 {
     km::Printer printer(m_table);
     printer.setFunction({"math", "physics", "chemistry"}, printMarks);
+    printer.setFunction("name",printName);
     printer.setHeaderPrinter(headerPrinter);
+    printer.printTableName(false);
     printer.print(std::cout, "");
 }
 
@@ -89,6 +91,7 @@ void StudentRecord::showTopStudents(const std::string &field)
         printer.setFunction("name",printName);
         printer.setFunction(field, printMarks);
         printer.setHeaderPrinter(headerPrinter);
+        printer.printTableName(false);
         printer.print(std::cout, "");
     }
     catch (...)

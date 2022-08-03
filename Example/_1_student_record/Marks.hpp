@@ -18,7 +18,7 @@ private:
 };
 
 inline Marks::Marks(km::KInt32 math_marks, km::KInt32 physics_marks, km::KInt32 chemistry_marks) : m_math(math_marks > 50 ? 0 : math_marks),
-                                                                              m_physics(physics_marks > 50 ? 0 : math_marks),
+                                                                              m_physics(physics_marks > 50 ? 0 : physics_marks),
                                                                               m_chemistry(chemistry_marks > 50 ? 0 : chemistry_marks)
 {
 }

@@ -1,3 +1,9 @@
+/**
+ * @file Parser2.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains classes and functions for parsing and executing formulae.
+ */
 #ifndef KMTABLELIB_KMT_PARSER2_HPP
 #define KMTABLELIB_KMT_PARSER2_HPP
 
@@ -16,21 +22,21 @@ namespace km
     {
         struct function_info_t
         {
-            Variant (*function)(const Variant *); // function
-            SizeType argc;                        // argument count
-            IndexType end_token;                  // ending token e.g. ')'
+            Variant (*function)(const Variant *); ///< function
+            SizeType argc;                        ///< argument count
+            IndexType end_token;                  ///< ending token e.g. ')'
         };
 
         struct column_info_t
         {
-            IndexType index; // column index
-            DataType type;   // type of column
+            IndexType index; ///< column index
+            DataType type;   ///< type of column
         };
 
         struct Token
         {
-            std::string text;    // token text
-            uint16_t token_type; // token type
+            std::string text;    ///< token text
+            uint16_t token_type; ///< token type
             struct
             {
                 function_info_t &asFncInfo() { return std::get<function_info_t>(e); }

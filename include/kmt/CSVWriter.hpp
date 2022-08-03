@@ -1,3 +1,10 @@
+/**
+ * @file CsvWriter.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains functions for writing csv files.
+ */
+
 #ifndef KMTABLELIB_KMT_CSVWRITER_HPP
 #define KMTABLELIB_KMT_CSVWRITER_HPP
 

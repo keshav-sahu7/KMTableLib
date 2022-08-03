@@ -5,7 +5,7 @@
 #include <gmock/gmock-matchers.h>
 
 #include <kmt/Table.hpp>
-#include <kmt/CSVWriter.hpp>
+#include <kmt/CsvWriter.hpp>
 
 #include "test_helper.hpp"
 

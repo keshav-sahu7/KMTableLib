@@ -1,3 +1,5 @@
 .vscode
 build
 docs
+tests\CTestTestfile.cmake
+CMakeLists.txt.user

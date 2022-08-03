@@ -1,3 +1,9 @@
+/**
+ * @file AbstractView.hpp
+ * @author Keshav Sahu
+ * @date Aug 2 2022
+ * @brief This file contains base interface for all view classes.
+ */
 #ifndef KMTABLELIB_KMT_ABSTRACT_VIEW_HPP
 #define KMTABLELIB_KMT_ABSTRACT_VIEW_HPP
 
@@ -174,8 +180,8 @@ namespace km
         KM_SLOT virtual void sourceAboutToBeDestructed() = 0;
 
     private:
-        AbstractTable *m_source_table;    /// the target source table
-        friend class ::km::AbstractTable; /// friend class
+        AbstractTable *m_source_table;
+        friend class ::km::AbstractTable;
     };
 
     inline AbstractView::AbstractView(const std::string &table_name, const std::string &decorated_name, SortingOrder s_order)

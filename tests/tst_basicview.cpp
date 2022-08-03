@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock-matchers.h>
-#include <Printer.hpp>
 
 #include <kmt/Table.hpp>
 #include <kmt/BasicView.hpp>
+#include <kmt/CsvWriter.hpp>
+#include <kmt/Printer.hpp>
 
 #include "test_helper.hpp"
-#include "CSVWriter.hpp"
 
 using namespace testing;
 

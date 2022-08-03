@@ -13,7 +13,6 @@ Events are used to notify the dependent views that the current table/view is mod
 | 32 | 30 |
 | 64 | 39 |
 
-
 And a view follows it with this filter **isEven($x)** like below
 
 | x  | y  |

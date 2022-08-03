@@ -1,4 +1,5 @@
 #include "test_helper.hpp"
+
 #include <kmt/Core.hpp>
 
 namespace test_local

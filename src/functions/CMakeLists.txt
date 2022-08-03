@@ -1,11 +1,11 @@
 
 set(KMT_FUNCTION_SOURCES
-    Arithmeticfunctions.cpp
-    Comparatorfunctions.cpp
+    ArithmeticFunctions.cpp
+    ComparatorFunctions.cpp
     DateFunctions.cpp
-    Logicalfunctions.cpp
-    Stringfunctions.cpp
-    Typefunctions.cpp
+    LogicalFunctions.cpp
+    StringFunctions.cpp
+    TypeFunctions.cpp
 )
 
 set(KMT_FUNCTION_LIB_NAME function)

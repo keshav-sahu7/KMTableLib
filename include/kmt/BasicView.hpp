@@ -1,3 +1,10 @@
+/**
+ * @file BasicView.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains BasicView class.
+ */
+
 #ifndef KMTABLELIB_KMT_BASIC_VIEW_HPP
 #define KMTABLELIB_KMT_BASIC_VIEW_HPP
 
@@ -39,6 +46,7 @@ namespace km
      */
     class BasicView final : public AbstractView
     {
+        KM_DISABLE_COPY_MOVE(BasicView)
     public:
         /**
          * @brief Constructor

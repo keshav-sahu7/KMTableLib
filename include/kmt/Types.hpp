@@ -1,3 +1,10 @@
+/**
+ * @file Types.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains data type definitions that all the table and view class uses.
+ */
+
 #ifndef KMTABLELIB_KMT_TYPES_HPP
 #define KMTABLELIB_KMT_TYPES_HPP
 
@@ -16,9 +23,9 @@ namespace km
          */
         struct date_t
         {
-            uint16_t year;
-            uint8_t month;
-            uint8_t day;
+            uint16_t year;          ///< year
+            uint8_t month;          ///< month
+            uint8_t day;            ///< day
         };
 
         /**
@@ -28,12 +35,12 @@ namespace km
          */
         struct date_time_t
         {
-            date_t date;
+            date_t date;        ///< date
             struct time_t_
             {
-                uint8_t hour;
-                uint8_t minute;
-                uint8_t second;
+                uint8_t hour;       ///< hour
+                uint8_t minute;     ///< minute
+                uint8_t second;     ///< second
             } time;
         };
 
@@ -54,23 +61,23 @@ namespace km
         typedef decltype(get_float_<8>()) k_float_64_;
         static_assert(sizeof(k_float_64_) >= 8, "No > 8 bytes float type available.");
 
-        using KInt32 = int32_t;        /// 4 byte integer
-        using KInt64 = int64_t;        /// 8 byte integer
-        using KFloat32 = k_float_32_;  /// floating point type of at least 4 bytes
-        using KFloat64 = k_float_64_;  /// floating point of at least 8 byte
-        using KString = std::string;   /// to hold text/strings
-        using KBoolean = bool;         /// to hold boolean values "True" and "False"
-        using KDate = date_t;          /// to hold date information
-        using KDateTime = date_time_t; /// to hold date and time
+        using KInt32 = int32_t;        ///< 4 byte integer
+        using KInt64 = int64_t;        ///< 8 byte integer
+        using KFloat32 = k_float_32_;  ///< floating point type of at least 4 bytes
+        using KFloat64 = k_float_64_;  ///< floating point of at least 8 byte
+        using KString = std::string;   ///< to hold text/strings
+        using KBoolean = bool;         ///< to hold boolean values "True" and "False"
+        using KDate = date_t;          ///< to hold date information
+        using KDateTime = date_time_t; ///< to hold date and time
 
         using IndexType = std::size_t;
         using SizeType = std::size_t;
     }
 
-    /// indicates invalid index
-    constexpr IndexType INVALID_INDEX = -1;
-    /// indicates invalid size
-    constexpr SizeType INVALID_SIZE = -1;
+    
+    constexpr IndexType INVALID_INDEX = -1;     ///< indicates invalid index
+    
+    constexpr SizeType INVALID_SIZE = -1;       ///< indicates invalid size
 
     /**
      * @brief Converts @a date to string and @a sep is used as sperator.
@@ -108,11 +115,17 @@ namespace km
         return stream;
     }
 
+    /**
+     * @brief Converts time to seconds.
+     */
     constexpr inline int32_t toSeconds(KDateTime::time_t_ t)
     {
         return t.hour * 3600 + t.minute * 60 + t.second;
     }
 
+    /**
+     * @brief Converts date into integer
+     */
     constexpr inline int32_t integralRepresentationOf(KDate d)
     {
         return d.year * 10000 + d.month * 100 + d.day;

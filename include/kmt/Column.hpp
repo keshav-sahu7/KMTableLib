@@ -1,3 +1,10 @@
+/**
+ * @file Column.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains Column classes.
+ */
+
 #ifndef KMTABLELIB_KMT_COLUMN_HPP
 #define KMTABLELIB_KMT_COLUMN_HPP
 
@@ -15,11 +22,17 @@ namespace km
      */
     struct ColumnMetaData
     {
-        std::string column_name;
-        std::string display_name;
-        DataType data_type;
+        std::string column_name;            ///< column name/id used in formula
+        std::string display_name;           ///< a description about column
+        DataType data_type;                 ///< data type of the column
 
+        /**
+         * @brief Constructor 
+         */
         ColumnMetaData(const std::string &c_name, DataType d_type) : column_name(c_name), data_type(d_type) {}
+        /**
+         * @brief Constructor
+         */
         ColumnMetaData(const std::string &c_name, const std::string &d_name, DataType d_type) : column_name(c_name), display_name(d_name), data_type(d_type) {}
     };
 

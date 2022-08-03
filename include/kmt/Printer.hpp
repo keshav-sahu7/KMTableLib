@@ -1,3 +1,10 @@
+/**
+ * @file Printer.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains functions for printing tables and views.
+ */
+
 #ifndef KMTABLELIB_KMT_PRINTER_HPP
 #define KMTABLELIB_KMT_PRINTER_HPP
 
@@ -15,6 +22,7 @@ namespace km
      */
     class Printer
     {
+        KM_DISABLE_COPY_MOVE(Printer)
         using ElementPrinter_ = std::function<void(const Variant &, std::ostream &)>;
         using HeaderPrinter_ = std::function<void(const std::vector<std::string> &, std::ostream &, const char *)>;
 
@@ -41,7 +49,7 @@ namespace km
 
         /**
          * @brief Prints the table to given @a stream.
-         * 
+         *
          * @a stream is the output stream to write data on. @a del is delemeter to separate columns.
          * Returns true on success. If any exception is thrown it writes it to logs and returns false.
          */
@@ -83,7 +91,7 @@ namespace km
          * @code
          * void function(const Variant &v, std::ostream &stream);
          * @endcode
-         * 
+         *
          * For other functions use std::bind.
          */
         void setFunction(const std::vector<std::string> &column_name_vec, ElementPrinter_ fnc);
@@ -101,7 +109,7 @@ namespace km
          * function. Else user's given function is set.
          *
          * @note @a header_printer must have this prototype
-         * 
+         *
          * @code
          * void function_name(const std::vector<std::string> &headers, std::ostream &stream, const char* del);
          * @endcode

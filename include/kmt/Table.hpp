@@ -1,3 +1,9 @@
+/**
+ * @file Table.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains base Table class.
+ */
 #ifndef KMTABLELIB_KMT_TABLE_HPP
 #define KMTABLELIB_KMT_TABLE_HPP
 
@@ -206,12 +212,12 @@ namespace km
 
     // will be made private in next update.
     protected:
-        std::vector<IndexType> m_indices;                   /// index of the rows inserted in the columns
-        std::vector<AbstractColumnPtr_> m_columns;          /// list of columns
-        std::vector<IndexType> m_free_space;                /// contains indices which are marked free
-        AbstractColumnPtr_ m_base_column;                   /// the first column
-        const Comparator_ m_comparator;                     /// comparator for the primary column
-        SizeType m_mfst;                                    /// max free space tolerance
+        std::vector<IndexType> m_indices;                   ///< index of the rows inserted in the columns
+        std::vector<AbstractColumnPtr_> m_columns;          ///< list of columns
+        std::vector<IndexType> m_free_space;                ///< contains indices which are marked free
+        AbstractColumnPtr_ m_base_column;                   ///< the first column
+        const Comparator_ m_comparator;                     ///< comparator for the primary column
+        SizeType m_mfst;                                    ///< max free space tolerance
 
     private:
         

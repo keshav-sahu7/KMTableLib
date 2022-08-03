@@ -1,3 +1,2 @@
-_tmp
-cmake_command
-
+*/*.exe
+_2_book_store/BookLibraryData/*

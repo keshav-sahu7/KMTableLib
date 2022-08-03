@@ -1,4 +1,9 @@
-
+/**
+ * @file LogMsg.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains classes for creating formatted errors.
+ */
 #ifndef KMTABLELIB_KMT_LOGMSG_HPP
 #define KMTABLELIB_KMT_LOGMSG_HPP
 

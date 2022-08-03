@@ -1,3 +1,9 @@
+/**
+ * @file TypeTraits.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains classes for checking data types.
+ */
 #ifndef KMTABLELIB_KMT_TYPESTRAITS_HPP
 #define KMTABLELIB_KMT_TYPESTRAITS_HPP
 

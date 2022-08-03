@@ -344,7 +344,8 @@ namespace km
         std::for_each(m_indices.begin(), m_indices.end(), [row_index](IndexType &index)
                       {
             if(index > row_index) --index; });
-        KM_EMIT rowDropEvent(view_row_index);
+        if(view_row_index != INVALID_INDEX)
+            KM_EMIT rowDropEvent(view_row_index);
     }
 
     KM_SLOT void BasicView::sourceSorted()

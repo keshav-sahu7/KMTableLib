@@ -1,3 +1,9 @@
+/**
+ * @file TableIO.hpp
+ * @author Keshav Sahu
+ * @date May 1st 2022
+ * @brief This file contains I/O functions for reading and writing Table.
+ */
 #ifndef KMTABLELIB_KMT_TABLEIO_HPP
 #define KMTABLELIB_KMT_TABLEIO_HPP
 

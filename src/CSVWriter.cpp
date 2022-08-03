@@ -1,5 +1,7 @@
+#include "CsvWriter.hpp"
+
 #include <fstream>
-#include "CSVWriter.hpp"
+
 #include "Printer.hpp"
 #include "AbstractTable.hpp"
 #include "ErrorHandler.hpp"

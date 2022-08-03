@@ -1,5 +1,6 @@
 #ifndef KMTABLE_TESTS_TABLE_HELPER_HPP
 #define KMTABLE_TESTS_TABLE_HELPER_HPP
+
 #include <memory>
 #include <kmt/Table.hpp>
 
