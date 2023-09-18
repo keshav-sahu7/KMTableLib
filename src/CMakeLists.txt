@@ -20,9 +20,31 @@ set(
     LogFileHelper.h
 )
 
+set(
+    KMT_HEADERS
+
+
+    ../include/kmt/AbstractTable.hpp
+    ../include/kmt/AbstractView.hpp
+    ../include/kmt/BasicView.hpp
+    ../include/kmt/Column.hpp
+    ../include/kmt/Core.hpp
+    ../include/kmt/CsvWriter.hpp
+    ../include/kmt/ErrorHandler.hpp
+    ../include/kmt/FunctionStore.hpp
+    ../include/kmt/LogMsg.hpp
+    ../include/kmt/Parser2.hpp
+    ../include/kmt/Printer.hpp
+    ../include/kmt/Table.hpp
+    ../include/kmt/TableIO.hpp
+    ../include/kmt/Types.hpp
+    ../include/kmt/TypeTraits.hpp
+)
+
+
 add_subdirectory(functions)
 
-add_library(${CMAKE_PROJECT_NAME} SHARED ${KMT_SOURCES})
+add_library(${CMAKE_PROJECT_NAME} SHARED ${KMT_SOURCES} ${KMT_HEADERS})
 
 #our main target KMTable.so or KMTable.dll
 set_target_properties( ${CMAKE_PROJECT_NAME}
