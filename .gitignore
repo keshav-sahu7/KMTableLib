@@ -1,4 +1,5 @@
 .vscode
+.vs
 build
 docs
 tests\CTestTestfile.cmake
