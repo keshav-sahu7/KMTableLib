@@ -11,7 +11,7 @@ set(
     LogMsg.cpp
     Printer.cpp
     TableIO.cpp
-    CsvWriter.cpp
+    CSVWriter.cpp
     Parser2.cpp
     Table.cpp
     Types.cpp
