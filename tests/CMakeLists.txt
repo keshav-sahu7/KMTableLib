@@ -2,28 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 
 find_package(Threads REQUIRED)
 
-#########################################################################################
-################################GooogleTest[Settings]####################################
-if ($ENV{GOOGLETEST_DIR})
-    set(GOOGLETEST_DIR $ENV{GOOGLETEST_DIR})
-else ()
-    if (NOT "C:/Users/Windows10/googletest" STREQUAL "")
-        message(WARNING "Using googletest src dir specified at Qt Creator wizard")
-    endif ()
-    set(GOOGLETEST_DIR "C:/Users/Windows10/googletest")
-endif ()
-if (EXISTS ${GOOGLETEST_DIR})
-    set(GTestSrc ${GOOGLETEST_DIR}/googletest)
-    set(GMockSrc ${GOOGLETEST_DIR}/googlemock)
-elseif (UNIX AND EXISTS /usr/src/gtest)
-    set(GTestSrc /usr/src/gtest)
-    message(WARNING "Using gtest from system")
-    if (EXISTS /usr/src/gmock)
-        set(GMockSrc /usr/src/gmock)
-    endif ()
-else ()
-    message( FATAL_ERROR "No googletest src dir found - set GOOGLETEST_DIR to enable!")
-endif ()
 
 set(GTestFiles ${GTestSrc}/src/gtest-all.cc)
 set(GTestIncludes ${GTestSrc} ${GTestSrc}/include)
