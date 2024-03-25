@@ -231,31 +231,59 @@ namespace km
     }
 
     template <typename T>
-    constexpr DataType dataTypeFor;
+    constexpr DataType dataTypeFor()
+    {
+        static_assert(sizeof(T) != sizeof(T), "No specialization for this data type!");
+        return static_cast<DataType>(-1);
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KInt32> = DataType::INT32;
+    constexpr DataType dataTypeFor<KInt32>()
+    {
+        return DataType::INT32;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KInt64> = DataType::INT64;
+    constexpr DataType dataTypeFor<KInt64>()
+    {
+        return DataType::INT64;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KFloat32> = DataType::FLOAT32;
+    constexpr DataType dataTypeFor<KFloat32>()
+    {
+        return DataType::FLOAT32;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KFloat64> = DataType::FLOAT64;
+    constexpr DataType dataTypeFor<KFloat64>()
+    {
+        return DataType::FLOAT64;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KString> = DataType::STRING;
+    constexpr DataType dataTypeFor<KString>()
+    {
+        return DataType::STRING;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KBoolean> = DataType::BOOLEAN;
+    constexpr DataType dataTypeFor<KBoolean>()
+    {
+        return DataType::BOOLEAN;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KDate> = DataType::DATE;
+    constexpr DataType dataTypeFor<KDate>()
+    {
+        return DataType::DATE;
+    }
 
     template <>
-    constexpr DataType dataTypeFor<KDateTime> = DataType::DATE_TIME;
+    constexpr DataType dataTypeFor<KDateTime>()
+    {
+        return DataType::DATE_TIME;
+    }
 
     /**
      * @brief This class implements %AbstractColumn class for different
@@ -282,7 +310,7 @@ namespace km
          * 
          * Constructs Column with given @a column_name and @a display_name and type is auto detected.
          */
-        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<Type_>) {}
+        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<Type_>()) {}
 
         /**
          * @brief defaulted copy constructor.
@@ -375,7 +403,7 @@ namespace km
         KFloat32 m_epsilon;
 
     public:
-        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat32>), m_epsilon(std::numeric_limits<KFloat32>::epsilon()) {}
+        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat32>()), m_epsilon(std::numeric_limits<KFloat32>::epsilon()) {}
 
         Column(const Column &) = default;
 
@@ -456,7 +484,7 @@ namespace km
         KFloat64 m_epsilon;
 
     public:
-        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat64>), m_epsilon(std::numeric_limits<KFloat64>::epsilon()) {}
+        Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat64>()), m_epsilon(std::numeric_limits<KFloat64>::epsilon()) {}
 
         Column(const Column &) = default;
         Column(Column &&) = default;
