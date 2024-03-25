@@ -1,5 +1,7 @@
 # KMTableLib
 
+[![CMake on linux platforms](https://github.com/keshav-sahu7/KMTableLib/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/keshav-sahu7/KMTableLib/actions/workflows/cmake-multi-platform.yml)
+
 A library that allows easy handling of various types of data in tabular form and easy manipulation and automation of the data. It supports int (32 and 64 bit), float (at least 32 bit and 64 bit), string, boolean, date and date+time.
 
 ## Table

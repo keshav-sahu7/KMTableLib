@@ -11,7 +11,7 @@ set(
     LogMsg.cpp
     Printer.cpp
     TableIO.cpp
-    CsvWriter.cpp
+    CSVWriter.cpp
     Parser2.cpp
     Table.cpp
     Types.cpp
@@ -29,7 +29,7 @@ set(
     ../include/kmt/BasicView.hpp
     ../include/kmt/Column.hpp
     ../include/kmt/Core.hpp
-    ../include/kmt/CsvWriter.hpp
+    ../include/kmt/CSVWriter.hpp
     ../include/kmt/ErrorHandler.hpp
     ../include/kmt/FunctionStore.hpp
     ../include/kmt/LogMsg.hpp
