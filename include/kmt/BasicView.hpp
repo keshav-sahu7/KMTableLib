@@ -8,10 +8,8 @@
 #ifndef KMTABLELIB_KMT_BASIC_VIEW_HPP
 #define KMTABLELIB_KMT_BASIC_VIEW_HPP
 
-#include <unordered_set>
 
 #include "AbstractView.hpp"
-#include "Table.hpp"
 
 namespace km
 {

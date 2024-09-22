@@ -204,7 +204,7 @@ namespace km
         void reserve(SizeType row_count) override;
         void sort() override;
         void setDisplayName(const std::string &display_name, IndexType column_index) override;
-        std::string getDisplayName(IndexType column_index) const;
+        std::string getDisplayName(IndexType column_index) const override;
 
     protected:
 

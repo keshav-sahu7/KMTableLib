@@ -312,25 +312,7 @@ namespace km
          */
         Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<Type_>()) {}
 
-        /**
-         * @brief defaulted copy constructor.
-         */
-        Column(const Column &) = default;
-
-        /**
-         * @brief defaulted move constructor.
-         */
-        Column(Column &&) = default;
-
-        /**
-         * @brief defaulted copy assignment.
-         */
-        Column &operator=(const Column &) = default;
-
-        /**
-         * @brief defaulted move assignment.
-         */
-        Column &operator=(Column &&) = default;
+        KM_DISABLE_COPY_MOVE(Column)
 
         void reserve(SizeType size) override
         {
@@ -405,12 +387,7 @@ namespace km
     public:
         Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat32>()), m_epsilon(std::numeric_limits<KFloat32>::epsilon()) {}
 
-        Column(const Column &) = default;
-
-        Column(Column &&) = default;
-
-        Column &operator=(const Column &) = default;
-        Column &operator=(Column &&) = default;
+        KM_DISABLE_COPY_MOVE(Column);
         void setEpsilon(const Variant &epsilon) override
         {
             m_epsilon = epsilon.asFloat32();
@@ -486,10 +463,7 @@ namespace km
     public:
         Column(const std::string &column_name, const std::string &display_name) : AbstractColumn(column_name, display_name, dataTypeFor<KFloat64>()), m_epsilon(std::numeric_limits<KFloat64>::epsilon()) {}
 
-        Column(const Column &) = default;
-        Column(Column &&) = default;
-        Column &operator=(const Column &) = default;
-        Column &operator=(Column &&) = default;
+        KM_DISABLE_COPY_MOVE(Column)
 
         void setEpsilon(const Variant &epsilon) override
         {

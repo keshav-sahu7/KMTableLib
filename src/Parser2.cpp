@@ -1,12 +1,10 @@
 #include <vector>
 #include <string>
-#include <map>
 #include <regex>
 #include <stack>
 
 #include "Core.hpp"
 #include "AbstractTable.hpp"
-#include "Table.hpp"
 #include "ErrorHandler.hpp"
 #include "FunctionStore.hpp"
 

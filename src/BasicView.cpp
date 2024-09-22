@@ -1,13 +1,11 @@
 #include "BasicView.hpp"
 
-#include <stdexcept>
 #include <algorithm>
 #include <numeric> //std::iota
 
 #include "UniqueNameContainer.h"
 #include "ErrorHandler.hpp"
 #include "KException.h"
-#include "debug.h"
 
 namespace km
 {

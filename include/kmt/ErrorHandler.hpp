@@ -8,9 +8,7 @@
 #ifndef KMTABLELIB_KMT_ERRORHANDLER_HPP
 #define KMTABLELIB_KMT_ERRORHANDLER_HPP
 
-#include <stack>
 #include <functional>
-#include "Core.hpp"
 #include "LogMsg.hpp"
 
 namespace km::err

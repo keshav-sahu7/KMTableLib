@@ -1,12 +1,9 @@
 #include "Table.hpp"
 
 #include <algorithm>
-#include <stdexcept>
-#include <memory>
 
 #include "ErrorHandler.hpp"
 #include "KException.h"
-#include "debug.h"
 
 namespace km
 {

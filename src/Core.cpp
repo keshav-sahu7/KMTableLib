@@ -1,7 +1,5 @@
 #include "Core.hpp"
 
-#include <array>
-#include <ostream>
 
 namespace km
 {

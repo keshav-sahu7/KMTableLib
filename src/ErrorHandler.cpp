@@ -4,6 +4,7 @@
 #include <fstream>
 #include <stack>
 #include <functional>
+#include <algorithm>
 #include "LogFileHelper.h"
 
 namespace km::err
