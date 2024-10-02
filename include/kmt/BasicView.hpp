@@ -90,7 +90,7 @@ namespace km
         SizeType columnCount() const override;
         std::optional<Variant> getData(IndexType row_index, IndexType column_index) const override;
         Variant getDataWC(IndexType row_index, IndexType column_index) const override;
-
+        std::string getDisplayName(IndexType column_index) const override;
         /**
          * @brief returns insertable position for @a data.
          * 

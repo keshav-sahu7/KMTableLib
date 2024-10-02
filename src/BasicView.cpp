@@ -162,6 +162,13 @@ namespace km
         return getSourceTable()->columnAt(m_selected_columns[column_index]);
     }
 
+    std::string BasicView::getDisplayName(IndexType column_index) const
+    {
+        if (column_index >= columnCount())
+            return {};
+        return getSourceTable()->getDisplayName(m_selected_columns[column_index]);
+    }
+
     std::optional<Variant> BasicView::getData(IndexType row_index, IndexType column_index) const
     {
         const SizeType column_count = columnCount();
